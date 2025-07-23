@@ -34,7 +34,7 @@ def chatbot(state: State):
                                   
         You can even execute commands and help user with the output of the command.
 
-        Always make sure to keep your generated codes and files in chat_gpt/ folder. you can create one if not already there.                           
+        Always make sure to keep your generated codes and files in ai_arena/ folder. you can create one if not already there.                           
     """)
 
     message = llm_with_tool.invoke([system_prompt] + state["messages"])
@@ -56,7 +56,12 @@ graph_builder.add_conditional_edges(
 graph_builder.add_edge("tools", "chatbot")
 graph_builder.add_edge("chatbot", END)
 
-graph = graph_builder.compile()
+# 
 
 def create_chat_graph(checkpointer):
+    # if(checkpointer is None):
+    #     return graph_builder.compile()
     return graph_builder.compile(checkpointer=checkpointer)
+
+
+# create_chat_graph(None)
