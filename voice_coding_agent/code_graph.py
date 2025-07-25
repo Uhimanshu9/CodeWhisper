@@ -5,26 +5,21 @@ from langgraph.graph.message import add_messages
 from langchain.chat_models import init_chat_model
 from langgraph.prebuilt import ToolNode, tools_condition
 from langgraph.graph import StateGraph, START, END
-from langchain_core.tools import tool
 from langchain.schema import SystemMessage
-
+from .tools.run_command import run_command_with_confirmation
+from .tools.list_processes import list_processes
+from .tools.push_to_github import push_to_github
+from .tools.search_in_files import search_in_files
+from .tools.show_python_docs import show_python_docs
 
 class State(TypedDict):
     messages: Annotated[list, add_messages]
 
-@tool
-def run_command(cmd: str):
-    """
-    Takes a command line prompt and executes it on the user's machine and 
-    returns the output of the command.
-    Example: run_command(cmd="ls") where ls is the command to list the files.
-    """
-    result = os.system(command=cmd)
-    return result
+
 
 llm = init_chat_model("google_genai:gemini-2.0-flash")
 
-llm_with_tool = llm.bind_tools(tools=[run_command])
+llm_with_tool = llm.bind_tools(tools=[run_command_with_confirmation])
 
 def chatbot(state: State):
     system_prompt = SystemMessage(content=
@@ -41,7 +36,13 @@ def chatbot(state: State):
     # assert len(message.tool_calls) <= 1
     return {"messages": [message]}
 
-tool_node = ToolNode(tools=[run_command])
+tool_node = ToolNode(
+    tools=[
+        run_command_with_confirmation , 
+        list_processes ,
+        push_to_github , 
+        search_in_files  
+        ])
 
 graph_builder = StateGraph(State)
 
