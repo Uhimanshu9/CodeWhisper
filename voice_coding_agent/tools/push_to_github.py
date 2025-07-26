@@ -10,7 +10,7 @@ def push_to_github(commit_message: str):
     commands = [
         "git add .",
         f'git commit -m "{commit_message}"',
-        "git push"
+        "git push origin main"
     ]
     try:
         for cmd in commands:

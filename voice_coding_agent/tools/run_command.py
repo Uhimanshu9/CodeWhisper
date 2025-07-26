@@ -51,6 +51,12 @@ def get_warning_for_command(cmd: str) -> dict | None:
 
 @tool
 def run_command_with_confirmation(cmd: str):
+    """
+    Takes a command line prompt and executes it on the user's machine and 
+    returns the output of the command.
+    Example: run_command(cmd="ls") where ls is the command to list the files.
+    """
+    
     warning_info = get_warning_for_command(cmd)
     if warning_info is not None:
         print(warning_info["message"])
