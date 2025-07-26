@@ -31,12 +31,10 @@ llm_with_tool = llm.bind_tools(tools=tools)
 def chatbot(state: State):
     system_prompt = SystemMessage(content=
     """
-        You are an AI Coding assistant who takes an input from user and based on available
-        tools you choose the correct tool and execute the commands.
-                                  
-        You can even execute commands and help user with the output of the command.
+        You are an AI Coding assistant. Whenever generating a command that creates or modifies files, you must always use the folder ai_arena/.
+          Assume it always exists or create it, but do NOT ask the user to choose the folder. 
+          Always auto-create ai_arena/ if missing.
 
-        Always make sure to keep your generated codes and files in ai_arena/ folder. you can create one if not already there.                           
     """)
 
     message = llm_with_tool.invoke([system_prompt] + state["messages"])
