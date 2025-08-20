@@ -11,6 +11,7 @@ from tools.list_processes import list_processes
 from tools.push_to_github import push_to_github
 from tools.search_in_files import search_in_files
 from tools.show_python_docs import show_python_docs
+from rag.rag import update_project_index
 
 class State(TypedDict):
     messages: Annotated[list, add_messages]
@@ -21,9 +22,10 @@ tools=[
         list_processes ,
         push_to_github , 
         search_in_files ,
-        show_python_docs
+        show_python_docs,
+        update_project_index
         ]
-
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/home/daddy/daddy_cook/AI_engi/langgraph-466710-949f82d0afcb.json"
 llm = init_chat_model("google_genai:gemini-2.0-flash")
 
 llm_with_tool = llm.bind_tools(tools=tools)

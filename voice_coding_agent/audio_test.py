@@ -42,4 +42,32 @@ def voice_input():
                     if "messages" in event:
                         event['messages'][-1].pretty_print()
 
-voice_input()
+
+def text_input():
+    """
+    Capture text from the keyboard and interact with the assistant.
+    If the user types 'stop', halt all execution and exit the loop.
+    """
+    with MongoDBSaver.from_conn_string(MONGODB_URI) as checkpointer:
+        graph = create_chat_graph(checkpointer)
+
+        while True:
+            text = input("💬 Please type your message... ")
+
+            # Listen for 'stop' to break out of the loop
+            if text.strip().lower() == "stop":
+                print("🛑 Stopping text assistant as requested.")
+                break
+
+            for event in graph.stream({"messages": [{"role": "user", "content": text}]}, config=config, stream_mode="values"):
+                # if "messages" in event:
+                #     event['messages'][-1].pretty_print()
+                if "messages" in event:
+                    last_msg = event['messages'][-1]
+                    if last_msg.type == "ai":   
+                        last_msg.pretty_print()
+
+# voice_input()
+text_input()
+
+
