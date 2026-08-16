@@ -5,7 +5,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![LangGraph](https://img.shields.io/badge/LangGraph-Enabled-green.svg)](https://github.com/langchain-ai/langgraph)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Persistence-brightgreen.svg)](https://www.mongodb.com/)
-[![AI](https://img.shields.io/badge/AI-Gemini%202.0-orange.svg)](https://deepmind.google/technologies/gemini/)
+[![AI](https://img.shields.io/badge/AI-LiteLLM%20%2B%20OpenAI-orange.svg)](https://docs.litellm.ai/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -40,14 +40,17 @@ Your conversations aren't lost. Pick up exactly where you left off, maintaining 
 - **Python Documentation**: Instant access to module docs without leaving your flow
 - **Codebase Indexing**: RAG-powered understanding of your entire project
 
-### 🤖 **AI-Powered by Gemini 2.0**
-Leverages Google's latest Gemini 2.0 Flash for lightning-fast natural language understanding and code generation.
+### 🤖 **AI-Powered by LiteLLM + OpenAI**
+Uses LiteLLM as the model gateway and routes the default coding assistant model to OpenAI with `OPENAI_API_KEY`. Change `LITELLM_MODEL` without changing the LangGraph tool workflow.
 
 ### 🛡️ **Safety First Design**
 Destructive operations require confirmation. Your codebase stays protected while you explore.
 
 ### 📚 **RAG-Enhanced Intelligence**
 CodeWhisper indexes your codebase, understands relationships, and provides context-aware suggestions based on YOUR code style.
+
+### 🧬 **Visual Version Control and Previews**
+Save meaningful generated-UI checkpoints, inspect the Git lineage, branch from an older design, and run a selected static version in an isolated Docker preview. See [Visual Version Control](voice_coding_agent/version_preview/README.md) for the local dashboard and preview requirements.
 
 ---
 
@@ -72,7 +75,7 @@ CodeWhisper indexes your codebase, understands relationships, and provides conte
 ```bash
 ✅ Python 3.8 or higher
 ✅ MongoDB instance (local or remote)
-✅ Google API credentials (Gemini)
+✅ OpenAI API credentials
 ✅ Microphone (for voice mode)
 ```
 
@@ -100,7 +103,8 @@ cp .env.example .env
 Create `.env` file:
 ```env
 MONGODB_URI=mongodb://admin:admin@localhost:27017
-GOOGLE_API_KEY=your_google_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here
+LITELLM_MODEL=openai/gpt-4.1
 ```
 
 ### Run CodeWhisper
@@ -181,7 +185,7 @@ CodeWhisper/
 
 ```
 1. 🎤 Input → Voice/Text captured
-2. 🧠 Understanding → Gemini interprets intent
+2. 🧠 Understanding → LiteLLM routes the request to OpenAI
 3. 🎯 Routing → LangGraph selects appropriate tools
 4. ⚡ Execution → Tools run with safety checks
 5. 💾 Memory → State persisted to MongoDB
@@ -193,13 +197,12 @@ CodeWhisper/
 ## 🔧 Advanced Configuration
 
 ### Switch AI Models
-```python
-# In code_graph.py
-llm = init_chat_model("google_genai:gemini-2.0-flash")
+```env
+# In voice_coding_agent/.env
+LITELLM_MODEL=openai/gpt-4.1
 
-# Alternatives:
-# llm = init_chat_model("openai:gpt-4")
-# llm = init_chat_model("anthropic:claude-3-opus")
+# LiteLLM also supports other providers when their credentials are configured.
+# For example: anthropic/claude-sonnet-4-5-20250929
 ```
 
 ### Customize Conversation Threads
@@ -291,8 +294,8 @@ pytest tests/ -v
 <details>
 <summary><b>🤖 AI API Errors</b></summary>
 
-- Verify Google API key is valid and active
-- Check API quota at Google Cloud Console
+- Verify the OpenAI API key is valid and active
+- Check API quota and billing in the OpenAI dashboard
 - Ensure billing is enabled
 - Test with a simple curl request to verify connectivity
 </details>
@@ -312,7 +315,7 @@ pytest tests/ -v
 
 ### 🎯 Upcoming Features
 
-- [ ] 🌐 **Multi-LLM Support**: OpenAI, Anthropic, Ollama, local models
+- [ ] 🌐 **Multi-LLM Product Configuration**: provider routing is available through LiteLLM; UI/configuration is still pending
 - [ ] 🖥️ **Web Dashboard**: Beautiful UI for managing conversations
 - [ ] 🔌 **IDE Plugins**: VS Code, PyCharm, Cursor integration
 - [ ] 🌍 **Multi-Language**: Generate code in any programming language
@@ -353,7 +356,8 @@ Free to use, modify, and distribute. Commercial use allowed!
 Built with amazing open-source tools:
 
 - 🦜 [LangGraph](https://github.com/langchain-ai/langgraph) - Agentic AI workflows
-- 🧠 [Google Gemini](https://deepmind.google/technologies/gemini/) - Powerful language model
+- 🔀 [LiteLLM](https://docs.litellm.ai/) - Unified model gateway
+- 🧠 [OpenAI](https://platform.openai.com/docs/overview) - Coding model provider
 - 🍃 [MongoDB](https://www.mongodb.com/) - Conversation persistence
 - 🎙️ [SpeechRecognition](https://github.com/Uberi/speech_recognition) - Voice input processing
 - 💚 Open Source Community - For inspiration and support

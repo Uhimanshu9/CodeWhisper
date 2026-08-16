@@ -1,0 +1,182 @@
+{
+  "communities": {
+    "0": [
+      "typeddict",
+      "voice_coding_agent_code_graph",
+      "voice_coding_agent_code_graph_chatbot",
+      "voice_coding_agent_code_graph_state",
+      "voice_coding_agent_tools_run_command",
+      "voice_coding_agent_tools_run_command_py_tool",
+      "voice_coding_agent_tools_run_command_rationale_6",
+      "voice_coding_agent_tools_run_command_run_command_with_confirmation"
+    ],
+    "1": [
+      "voice_coding_agent_audio_test",
+      "voice_coding_agent_audio_test_rationale_47",
+      "voice_coding_agent_audio_test_rationale_9",
+      "voice_coding_agent_audio_test_text_input",
+      "voice_coding_agent_audio_test_voice_input",
+      "voice_coding_agent_code_graph_create_chat_graph"
+    ],
+    "2": [
+      "voice_coding_agent_rag_rag",
+      "voice_coding_agent_rag_rag_load_metadata",
+      "voice_coding_agent_rag_rag_py_tool",
+      "voice_coding_agent_rag_rag_rationale_67",
+      "voice_coding_agent_rag_rag_save_metadata",
+      "voice_coding_agent_rag_rag_update_project_index"
+    ],
+    "3": [
+      "voice_coding_agent_rag_rag_rationale_32",
+      "voice_coding_agent_rag_rag_rationale_46",
+      "voice_coding_agent_rag_rag_reindex_file",
+      "voice_coding_agent_rag_rag_stable_id"
+    ],
+    "4": [
+      "voice_coding_agent_tools_list_processes",
+      "voice_coding_agent_tools_list_processes_list_processes",
+      "voice_coding_agent_tools_list_processes_py_tool",
+      "voice_coding_agent_tools_list_processes_rationale_5"
+    ],
+    "5": [
+      "voice_coding_agent_tools_push_to_github",
+      "voice_coding_agent_tools_push_to_github_push_to_github",
+      "voice_coding_agent_tools_push_to_github_py_tool",
+      "voice_coding_agent_tools_push_to_github_rationale_6"
+    ],
+    "6": [
+      "voice_coding_agent_tools_search_in_files",
+      "voice_coding_agent_tools_search_in_files_py_tool",
+      "voice_coding_agent_tools_search_in_files_rationale_6",
+      "voice_coding_agent_tools_search_in_files_search_in_files"
+    ],
+    "7": [
+      "voice_coding_agent_tools_show_python_docs",
+      "voice_coding_agent_tools_show_python_docs_py_tool",
+      "voice_coding_agent_tools_show_python_docs_rationale_5",
+      "voice_coding_agent_tools_show_python_docs_show_python_docs"
+    ],
+    "8": [
+      "voice_coding_agent_rag_rag_file_hash",
+      "voice_coding_agent_rag_rag_rationale_27"
+    ],
+    "9": [
+      "voice_coding_agent_run",
+      "voice_coding_agent_run_sh__entry"
+    ],
+    "10": [
+      "voice_coding_agent_ai_arena_temp_d"
+    ]
+  },
+  "cohesion": {
+    "0": 0.32142857142857145,
+    "1": 0.4666666666666667,
+    "2": 0.4666666666666667,
+    "3": 0.5,
+    "4": 0.5,
+    "5": 0.5,
+    "6": 0.5,
+    "7": 0.5,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0
+  },
+  "gods": [
+    {
+      "id": "voice_coding_agent_rag_rag_update_project_index",
+      "label": "update_project_index()",
+      "degree": 9
+    },
+    {
+      "id": "voice_coding_agent_code_graph_create_chat_graph",
+      "label": "create_chat_graph()",
+      "degree": 4
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_stable_id",
+      "label": "stable_id()",
+      "degree": 4
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_reindex_file",
+      "label": "reindex_file()",
+      "degree": 4
+    },
+    {
+      "id": "voice_coding_agent_tools_list_processes_list_processes",
+      "label": "list_processes()",
+      "degree": 4
+    },
+    {
+      "id": "voice_coding_agent_tools_push_to_github_push_to_github",
+      "label": "push_to_github()",
+      "degree": 4
+    },
+    {
+      "id": "voice_coding_agent_tools_run_command_run_command_with_confirmation",
+      "label": "run_command_with_confirmation()",
+      "degree": 4
+    },
+    {
+      "id": "voice_coding_agent_tools_search_in_files_search_in_files",
+      "label": "search_in_files()",
+      "degree": 4
+    },
+    {
+      "id": "voice_coding_agent_tools_show_python_docs_show_python_docs",
+      "label": "show_python_docs()",
+      "degree": 4
+    },
+    {
+      "id": "voice_coding_agent_audio_test_voice_input",
+      "label": "voice_input()",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "voice_input()",
+      "target": "create_chat_graph()",
+      "source_files": [
+        "voice_coding_agent/audio_test.py",
+        "voice_coding_agent/code_graph.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "text_input()",
+      "target": "create_chat_graph()",
+      "source_files": [
+        "voice_coding_agent/audio_test.py",
+        "voice_coding_agent/code_graph.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `update_project_index()` connect `Community 2` to `Community 0`, `Community 8`, `Community 3`?",
+      "why": "High betweenness centrality (0.221) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `list_processes()` connect `Community 4` to `Community 0`?",
+      "why": "High betweenness centrality (0.084) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `push_to_github()` connect `Community 5` to `Community 0`?",
+      "why": "High betweenness centrality (0.084) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `run.sh script` to the rest of the system?",
+      "why": "1 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

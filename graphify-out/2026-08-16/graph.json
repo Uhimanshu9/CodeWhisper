@@ -1,0 +1,2203 @@
+{
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "nodes": [
+    {
+      "id": "voice_coding_agent_ai_arena_temp_d",
+      "label": "d.py",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/ai_arena_temp/d.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_audio_test",
+      "label": "audio_test.py",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_audio_test_voice_input",
+      "label": "voice_input()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L8",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_audio_test_text_input",
+      "label": "text_input()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L46",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_audio_test_rationale_9",
+      "label": "Capture audio from the microphone, convert to text, and interact with the…",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_audio_test_rationale_47",
+      "label": "Capture text from the keyboard and interact with the assistant. If the user…",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L47",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_code_graph",
+      "label": "code_graph.py",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_code_graph_state",
+      "label": "State",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L16",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "typeddict",
+      "label": "TypedDict",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_code_graph_chatbot",
+      "label": "chatbot()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L33",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_code_graph_create_chat_graph",
+      "label": "create_chat_graph()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L63",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag",
+      "label": "rag.py",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_file_hash",
+      "label": "file_hash()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L26",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_stable_id",
+      "label": "stable_id()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L31",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_load_metadata",
+      "label": "load_metadata()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L35",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_save_metadata",
+      "label": "save_metadata()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L41",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_reindex_file",
+      "label": "reindex_file()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L45",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_py_tool",
+      "label": "tool",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_update_project_index",
+      "label": "update_project_index()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L66",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_rationale_27",
+      "label": "Compute MD5 hash of a file.",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_rationale_32",
+      "label": "Generate stable ID for Qdrant from file path (instead of Python hash).",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L32",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_rationale_46",
+      "label": "Reindex a file into Qdrant using Gemini embeddings.",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L46",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_rag_rag_rationale_67",
+      "label": "Incrementally update project index by hashing files. Only changed files are re-…",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L67",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_run",
+      "label": "run.sh",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/run.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_run_sh__entry",
+      "label": "run.sh script",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/run.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_list_processes",
+      "label": "list_processes.py",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/list_processes.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_list_processes_py_tool",
+      "label": "tool",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_list_processes_list_processes",
+      "label": "list_processes()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/list_processes.py",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_list_processes_rationale_5",
+      "label": "Lists processes currently running for the user.",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/tools/list_processes.py",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_push_to_github",
+      "label": "push_to_github.py",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_push_to_github_run_git",
+      "label": "_run_git()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L9",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_push_to_github_try_git",
+      "label": "_try_git()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L21",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_push_to_github_py_tool",
+      "label": "tool",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_push_to_github_push_to_github",
+      "label": "push_to_github()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L35",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_push_to_github_rationale_10",
+      "label": "Run Git without a shell and return its trimmed stdout.",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_push_to_github_rationale_22",
+      "label": "Return Git output when a command succeeds, otherwise return None.",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_push_to_github_rationale_41",
+      "label": "Stage, commit, and push the current repository changes. The repository root,…",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L41",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_run_command",
+      "label": "run_command.py",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/run_command.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_run_command_py_tool",
+      "label": "tool",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_run_command_run_command_with_confirmation",
+      "label": "run_command_with_confirmation()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/run_command.py",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_run_command_rationale_6",
+      "label": "Takes a command line prompt and executes it on the user's machine and returns…",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/tools/run_command.py",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_search_in_files",
+      "label": "search_in_files.py",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/search_in_files.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_search_in_files_py_tool",
+      "label": "tool",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_search_in_files_search_in_files",
+      "label": "search_in_files()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/search_in_files.py",
+      "source_location": "L5",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_search_in_files_rationale_6",
+      "label": "Searches for a given term in all files in the current directory recursively.",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/tools/search_in_files.py",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_show_python_docs",
+      "label": "show_python_docs.py",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/show_python_docs.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_show_python_docs_py_tool",
+      "label": "tool",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_show_python_docs_show_python_docs",
+      "label": "show_python_docs()",
+      "file_type": "code",
+      "source_file": "voice_coding_agent/tools/show_python_docs.py",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "voice_coding_agent_tools_show_python_docs_rationale_5",
+      "label": "Opens the pydoc documentation for a given Python module or function.",
+      "file_type": "rationale",
+      "source_file": "voice_coding_agent/tools/show_python_docs.py",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_codewhisper",
+      "label": "🎙️ CodeWhisper",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_why_codewhisper",
+      "label": "🌟 Why CodeWhisper?",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_the_problem_we_solve",
+      "label": "💡 The Problem We Solve",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_powerful_features",
+      "label": "✨ Powerful Features",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_dual_input_modes",
+      "label": "🎤 **Dual Input Modes**",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_persistent_memory_with_mongodb",
+      "label": "🧠 **Persistent Memory with MongoDB**",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L32",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_smart_tool_ecosystem",
+      "label": "🔧 **Smart Tool Ecosystem**",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_ai_powered_by_gemini_2_0",
+      "label": "🤖 **AI-Powered by Gemini 2.0**",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_safety_first_design",
+      "label": "🛡️ **Safety First Design**",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L46",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_rag_enhanced_intelligence",
+      "label": "📚 **RAG-Enhanced Intelligence**",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_perfect_for",
+      "label": "🎯 Perfect For",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_quick_start",
+      "label": "🚀 Quick Start",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L68",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_prerequisites",
+      "label": "Prerequisites",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L70",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_installation",
+      "label": "Installation",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_configuration",
+      "label": "Configuration",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_run_codewhisper",
+      "label": "Run CodeWhisper",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L106",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_usage_examples",
+      "label": "🎮 Usage Examples",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L117",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_voice_commands",
+      "label": "🎤 Voice Commands",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L119",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_text_commands",
+      "label": "💬 Text Commands",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L137",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_tool_arsenal",
+      "label": "🛠️ Tool Arsenal",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L149",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_architecture",
+      "label": "🏗️ Architecture",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L162",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_how_it_works",
+      "label": "🔄 How It Works",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L180",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_advanced_configuration",
+      "label": "🔧 Advanced Configuration",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L193",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_switch_ai_models",
+      "label": "Switch AI Models",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L195",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_customize_conversation_threads",
+      "label": "Customize Conversation Threads",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L205",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_adjust_voice_recognition",
+      "label": "Adjust Voice Recognition",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L214",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_performance_requirements",
+      "label": "📊 Performance & Requirements",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L222",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_contributing",
+      "label": "🤝 Contributing",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L234",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_how_to_contribute",
+      "label": "How to Contribute",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L238",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_development_setup",
+      "label": "Development Setup",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L246",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_ideas_for_contributions",
+      "label": "Ideas for Contributions",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L260",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_troubleshooting",
+      "label": "🐛 Troubleshooting",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L271",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_roadmap",
+      "label": "🗺️ Roadmap",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L311",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_upcoming_features",
+      "label": "🎯 Upcoming Features",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L313",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_future_vision",
+      "label": "🌟 Future Vision",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L328",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_showcase",
+      "label": "🏆 Showcase",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L334",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_built_with_codewhisper",
+      "label": "Built with CodeWhisper",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L338",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_license",
+      "label": "📄 License",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L343",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_acknowledgments",
+      "label": "🙏 Acknowledgments",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L351",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_connect",
+      "label": "📧 Connect",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L363",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_star_us_on_github_it_motivates_us_a_lot",
+      "label": "⭐ Star us on GitHub — it motivates us a lot!",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L375",
+      "_origin": "ast"
+    }
+  ],
+  "links": [
+    {
+      "source": "voice_coding_agent_audio_test",
+      "target": "speech_recognition",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_audio_test",
+      "target": "langgraph_checkpoint_mongodb",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_audio_test",
+      "target": "code_graph",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_audio_test",
+      "target": "voice_coding_agent_audio_test_voice_input",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_audio_test",
+      "target": "voice_coding_agent_audio_test_text_input",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_audio_test_rationale_9",
+      "target": "voice_coding_agent_audio_test_voice_input",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_audio_test_rationale_47",
+      "target": "voice_coding_agent_audio_test_text_input",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "typing_extensions",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "langgraph_graph_message",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "langchain_chat_models",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "langgraph_prebuilt",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "langgraph_graph",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "langchain_schema",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "tools_run_command",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "tools_list_processes",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "tools_push_to_github",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "tools_search_in_files",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "tools_show_python_docs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "rag_rag",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_code_graph_state",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph_state",
+      "target": "typeddict",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_code_graph_chatbot",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph_chatbot",
+      "target": "voice_coding_agent_code_graph_state",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_code_graph_create_chat_graph",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "hashlib",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "qdrant_client",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "qdrant_client_http_models",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "langchain_google_genai",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "langchain_core_tools",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "voice_coding_agent_rag_rag_file_hash",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "voice_coding_agent_rag_rag_stable_id",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "voice_coding_agent_rag_rag_load_metadata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "voice_coding_agent_rag_rag_save_metadata",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "voice_coding_agent_rag_rag_reindex_file",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag_update_project_index",
+      "target": "voice_coding_agent_rag_rag_py_tool",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag",
+      "target": "voice_coding_agent_rag_rag_update_project_index",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag_reindex_file",
+      "target": "voice_coding_agent_rag_rag_stable_id",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag_update_project_index",
+      "target": "voice_coding_agent_rag_rag_load_metadata",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag_update_project_index",
+      "target": "voice_coding_agent_rag_rag_stable_id",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag_update_project_index",
+      "target": "voice_coding_agent_rag_rag_file_hash",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag_update_project_index",
+      "target": "voice_coding_agent_rag_rag_reindex_file",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag_update_project_index",
+      "target": "voice_coding_agent_rag_rag_save_metadata",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag_rationale_27",
+      "target": "voice_coding_agent_rag_rag_file_hash",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag_rationale_32",
+      "target": "voice_coding_agent_rag_rag_stable_id",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag_rationale_46",
+      "target": "voice_coding_agent_rag_rag_reindex_file",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_rag_rag_rationale_67",
+      "target": "voice_coding_agent_rag_rag_update_project_index",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/rag/rag.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_run",
+      "target": "voice_coding_agent_run_sh__entry",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/run.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_list_processes",
+      "target": "langchain_core_tools",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/list_processes.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_list_processes_list_processes",
+      "target": "voice_coding_agent_tools_list_processes_py_tool",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/list_processes.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_list_processes",
+      "target": "voice_coding_agent_tools_list_processes_list_processes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/list_processes.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_list_processes_rationale_5",
+      "target": "voice_coding_agent_tools_list_processes_list_processes",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/list_processes.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github",
+      "target": "subprocess",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github",
+      "target": "langchain_core_tools",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github",
+      "target": "voice_coding_agent_tools_push_to_github_run_git",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github",
+      "target": "voice_coding_agent_tools_push_to_github_try_git",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github_push_to_github",
+      "target": "voice_coding_agent_tools_push_to_github_py_tool",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github",
+      "target": "voice_coding_agent_tools_push_to_github_push_to_github",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github_push_to_github",
+      "target": "voice_coding_agent_tools_push_to_github_run_git",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github_push_to_github",
+      "target": "voice_coding_agent_tools_push_to_github_try_git",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github_rationale_10",
+      "target": "voice_coding_agent_tools_push_to_github_run_git",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github_rationale_22",
+      "target": "voice_coding_agent_tools_push_to_github_try_git",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_push_to_github_rationale_41",
+      "target": "voice_coding_agent_tools_push_to_github_push_to_github",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/push_to_github.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_run_command",
+      "target": "langchain_core_tools",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/run_command.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_run_command",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/run_command.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_run_command_run_command_with_confirmation",
+      "target": "voice_coding_agent_tools_run_command_py_tool",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/run_command.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_run_command",
+      "target": "voice_coding_agent_tools_run_command_run_command_with_confirmation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/run_command.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_run_command_rationale_6",
+      "target": "voice_coding_agent_tools_run_command_run_command_with_confirmation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/run_command.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_search_in_files",
+      "target": "langchain_core_tools",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/search_in_files.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_search_in_files_search_in_files",
+      "target": "voice_coding_agent_tools_search_in_files_py_tool",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/search_in_files.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_search_in_files",
+      "target": "voice_coding_agent_tools_search_in_files_search_in_files",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/search_in_files.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_search_in_files_rationale_6",
+      "target": "voice_coding_agent_tools_search_in_files_search_in_files",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/search_in_files.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_show_python_docs",
+      "target": "langchain_core_tools",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/show_python_docs.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_show_python_docs_show_python_docs",
+      "target": "voice_coding_agent_tools_show_python_docs_py_tool",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/show_python_docs.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "decorator",
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_show_python_docs",
+      "target": "voice_coding_agent_tools_show_python_docs_show_python_docs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/show_python_docs.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_tools_show_python_docs_rationale_5",
+      "target": "voice_coding_agent_tools_show_python_docs_show_python_docs",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/tools/show_python_docs.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme",
+      "target": "readme_codewhisper",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_why_codewhisper",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_why_codewhisper",
+      "target": "readme_the_problem_we_solve",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_powerful_features",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_powerful_features",
+      "target": "readme_dual_input_modes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_powerful_features",
+      "target": "readme_persistent_memory_with_mongodb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_powerful_features",
+      "target": "readme_smart_tool_ecosystem",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_powerful_features",
+      "target": "readme_ai_powered_by_gemini_2_0",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_powerful_features",
+      "target": "readme_safety_first_design",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_powerful_features",
+      "target": "readme_rag_enhanced_intelligence",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_perfect_for",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_quick_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_quick_start",
+      "target": "readme_prerequisites",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_quick_start",
+      "target": "readme_installation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_quick_start",
+      "target": "readme_configuration",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_quick_start",
+      "target": "readme_run_codewhisper",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_usage_examples",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_usage_examples",
+      "target": "readme_voice_commands",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_usage_examples",
+      "target": "readme_text_commands",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_tool_arsenal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_architecture",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_architecture",
+      "target": "readme_how_it_works",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L180",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_advanced_configuration",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L193",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_advanced_configuration",
+      "target": "readme_switch_ai_models",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L195",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_advanced_configuration",
+      "target": "readme_customize_conversation_threads",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L205",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_advanced_configuration",
+      "target": "readme_adjust_voice_recognition",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L214",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_performance_requirements",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L222",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_contributing",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L234",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_contributing",
+      "target": "readme_how_to_contribute",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L238",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_contributing",
+      "target": "readme_development_setup",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L246",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_contributing",
+      "target": "readme_ideas_for_contributions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L260",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_troubleshooting",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L271",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_roadmap",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L311",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_roadmap",
+      "target": "readme_upcoming_features",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L313",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_roadmap",
+      "target": "readme_future_vision",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L328",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_showcase",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L334",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_showcase",
+      "target": "readme_built_with_codewhisper",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L338",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_license",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L343",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme",
+      "target": "users_himanshu_dahiya_desktop_personal_code_codewhisper_license_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L345",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_acknowledgments",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L351",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_codewhisper",
+      "target": "readme_connect",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L363",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_connect",
+      "target": "readme_star_us_on_github_it_motivates_us_a_lot",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L375",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_audio_test",
+      "target": "voice_coding_agent_code_graph_create_chat_graph",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_tools_run_command_run_command_with_confirmation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_tools_list_processes_list_processes",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_tools_push_to_github_push_to_github",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_tools_search_in_files_search_in_files",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_tools_show_python_docs_show_python_docs",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_rag_rag_update_project_index",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_audio_test_voice_input",
+      "target": "voice_coding_agent_code_graph_create_chat_graph",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_audio_test_text_input",
+      "target": "voice_coding_agent_code_graph_create_chat_graph",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "voice_coding_agent/audio_test.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_tools_run_command_run_command_with_confirmation",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_tools_list_processes_list_processes",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_tools_push_to_github_push_to_github",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_tools_search_in_files_search_in_files",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_tools_show_python_docs_show_python_docs",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "voice_coding_agent_code_graph",
+      "target": "voice_coding_agent_rag_rag_update_project_index",
+      "relation": "indirect_call",
+      "context": "collection",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "voice_coding_agent/code_graph.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "directed": false
+}
