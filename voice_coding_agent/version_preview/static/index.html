@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CodeWhisper Visual Version Control</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="brand-mark">cw</div>
+        <div>
+          <p class="eyebrow">CODEWHISPER</p>
+          <h1>Visual version control</h1>
+        </div>
+      </div>
+      <div class="topbar-context">
+        <span class="context-label">Project</span>
+        <span id="projectBreadcrumb" class="context-value">Loading…</span>
+      </div>
+      <div class="topbar-actions">
+        <span class="branch-pill"><span class="branch-dot"></span><span id="activeBranch">Loading branch…</span></span>
+        <button id="refreshButton" class="icon-button" title="Refresh version history" aria-label="Refresh version history">↻</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="explorer panel">
+        <div class="panel-heading">
+          <div class="panel-title">WORKSPACE</div>
+          <span class="panel-kicker">FILES</span>
+        </div>
+        <div id="projectName" class="project-name">project</div>
+        <div class="tree-root"><span class="tree-chevron">⌄</span><span id="contentDir">ai_arena</span></div>
+        <ul id="fileTree" class="file-tree"></ul>
+        <div class="explorer-foot">
+          <span class="status-dot"></span>
+          <span id="workspaceStatus">Checking workspace…</span>
+        </div>
+      </aside>
+
+      <section class="lineage panel">
+        <div class="panel-title-row">
+          <div>
+            <div class="section-title-row"><div class="panel-title">VERSION HISTORY</div><span class="source-badge">GIT</span></div>
+            <p id="timelineSubtitle" class="muted">Git is the source of truth</p>
+          </div>
+          <button id="checkpointToggle" class="secondary-button">Save checkpoint</button>
+        </div>
+
+        <form id="checkpointForm" class="checkpoint-form hidden">
+          <input id="checkpointMessage" required maxlength="120" placeholder="Checkpoint title, e.g. Improve todo layout" />
+          <input id="checkpointPrompt" maxlength="500" placeholder="User prompt (optional)" />
+          <button type="submit">Commit current UI</button>
+        </form>
+
+        <div class="timeline-toolbar">
+          <span class="timeline-hint"><span class="timeline-hint-dot"></span> Select a checkpoint to inspect it</span>
+          <span id="timelineCount" class="timeline-count"></span>
+        </div>
+        <div id="timeline" class="timeline" aria-live="polite"></div>
+      </section>
+
+      <section class="preview panel">
+        <div class="panel-title-row">
+          <div>
+            <div class="section-title-row"><div class="panel-title">INSPECTOR</div><span id="previewState" class="preview-state">Idle</span></div>
+            <p id="selectionLabel" class="muted">Choose a version to inspect it.</p>
+          </div>
+        </div>
+
+        <div id="commitInspector" class="commit-inspector">
+          <div class="inspector-label">SELECTED CHECKPOINT</div>
+          <h2 id="inspectorMessage">No checkpoint selected</h2>
+          <div id="inspectorMeta" class="inspector-meta"></div>
+          <p id="inspectorPrompt" class="inspector-prompt">Select a version from the timeline to see its details and preview it in an isolated sandbox.</p>
+        </div>
+
+        <div class="preview-actions">
+          <button id="previewButton" class="primary-button" disabled>Start preview</button>
+          <button id="branchButton" class="secondary-button" disabled>Continue from here</button>
+          <button id="stopButton" class="ghost-button hidden">Stop</button>
+        </div>
+
+        <div id="previewEmpty" class="preview-empty">
+          <div class="preview-orb">↗</div>
+          <h2>Live sandbox</h2>
+          <p>Start a preview to open this checkpoint in an isolated Docker container. Static projects need an <code>index.html</code> in the generated app.</p>
+        </div>
+        <iframe id="previewFrame" class="preview-frame hidden" title="Selected version preview"></iframe>
+        <pre id="previewLogs" class="preview-logs hidden"></pre>
+
+        <div class="sandbox-footer">
+          <span><i class="status-dot"></i> Docker sandbox</span>
+          <span id="previewUrl">No container running</span>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast hidden" role="status"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>

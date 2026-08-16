@@ -6,14 +6,17 @@ from qdrant_client.http.models import PointStruct, PointsSelector, VectorParams,
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_core.tools import tool
 from qdrant_client.http.models import PointsSelector
+from tools.tool_trace import trace_tool
 
 
 # Config
 INDEX_FILE = "index_metadata.json"
 COLLECTION_NAME = "project_code"
 
-# Initialize embeddings + Qdrant
-embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+# Initialize the Qdrant store at import time, but defer Gemini embedding
+# construction until the RAG tool is actually used. The chat agent now uses
+# OpenAI through LiteLLM and should not require a Gemini key just to start.
+embeddings = None
 VECTOR_SIZE = 768  # Gemini embeddings dimension (models/embedding-001)
 qdrant = QdrantClient(":memory:")  # swap with persistent Qdrant server if needed
 
@@ -42,13 +45,27 @@ def save_metadata(meta):
     with open(INDEX_FILE, "w") as f:
         json.dump(meta, f, indent=2)
 
+
+def get_embeddings():
+    """Create Gemini embeddings only when the legacy RAG tool is requested."""
+    global embeddings
+    if embeddings is None:
+        if not (os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")):
+            raise RuntimeError(
+                "RAG indexing is disabled because GOOGLE_API_KEY or "
+                "GEMINI_API_KEY is not configured. The chat agent uses "
+                "OPENAI_API_KEY through LiteLLM."
+            )
+        embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+    return embeddings
+
 def reindex_file(path: str):
     """Reindex a file into Qdrant using Gemini embeddings."""
     with open(path, "r", encoding="utf-8", errors="ignore") as f:
         content = f.read()
 
     # Compute embedding vector for the file content
-    vec = embeddings.embed_query(content)
+    vec = get_embeddings().embed_query(content)
 
     qdrant.upsert(
         collection_name=COLLECTION_NAME,
@@ -63,6 +80,7 @@ def reindex_file(path: str):
     return f"Reindexed {path}"
 
 @tool
+@trace_tool
 def update_project_index(root: str = ".", force: bool = False) -> str:
     """
     Incrementally update project index by hashing files.
