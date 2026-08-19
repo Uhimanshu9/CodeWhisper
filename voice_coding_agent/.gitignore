@@ -1,1 +1,6 @@
 readme.md
+.env
+voice_coding_agent/.env
+.env
+.env.*
+!.env.example

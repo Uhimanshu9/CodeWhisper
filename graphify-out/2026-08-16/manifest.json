@@ -1,0 +1,77 @@
+{
+  "voice_coding_agent/ai_arena_temp/d.py": {
+    "mtime": 1786688705.9874976,
+    "ast_hash": "263bf849a1bf3ab3fa252d8a148091f0",
+    "semantic_hash": "263bf849a1bf3ab3fa252d8a148091f0"
+  },
+  "voice_coding_agent/audio_test.py": {
+    "mtime": 1786688705.9876072,
+    "ast_hash": "3e0ae4881bacfd28ddcfee9fff53f77f",
+    "semantic_hash": "3e0ae4881bacfd28ddcfee9fff53f77f"
+  },
+  "voice_coding_agent/code_graph.py": {
+    "mtime": 1786688705.9877164,
+    "ast_hash": "84be2a5feca8cbe140617ba0436939d7",
+    "semantic_hash": "84be2a5feca8cbe140617ba0436939d7"
+  },
+  "voice_coding_agent/rag/rag.py": {
+    "mtime": 1786688705.9882677,
+    "ast_hash": "3661d23d7d1caa89f512977bf4a14235",
+    "semantic_hash": "3661d23d7d1caa89f512977bf4a14235"
+  },
+  "voice_coding_agent/run.sh": {
+    "mtime": 1786688705.9884844,
+    "ast_hash": "f3bad51ba47d1b88b7de1b7c145eda05",
+    "semantic_hash": "f3bad51ba47d1b88b7de1b7c145eda05"
+  },
+  "voice_coding_agent/tools/list_processes.py": {
+    "mtime": 1786688705.9891794,
+    "ast_hash": "873ce20edd37fa3d19435bfbafea5485",
+    "semantic_hash": "873ce20edd37fa3d19435bfbafea5485"
+  },
+  "voice_coding_agent/tools/push_to_github.py": {
+    "mtime": 1786864735.544074,
+    "ast_hash": "4f367c1e6c1665933b1dc34f2546e733",
+    "semantic_hash": ""
+  },
+  "voice_coding_agent/tools/run_command.py": {
+    "mtime": 1786688705.989378,
+    "ast_hash": "9586075fc86534fb9579508a842b19bf",
+    "semantic_hash": "9586075fc86534fb9579508a842b19bf"
+  },
+  "voice_coding_agent/tools/search_in_files.py": {
+    "mtime": 1786688705.9894712,
+    "ast_hash": "72fc0abd67504f99db912863c0368a6c",
+    "semantic_hash": "72fc0abd67504f99db912863c0368a6c"
+  },
+  "voice_coding_agent/tools/show_python_docs.py": {
+    "mtime": 1786688705.9895632,
+    "ast_hash": "30aefe14f17e33fba9e002097cc62c68",
+    "semantic_hash": "30aefe14f17e33fba9e002097cc62c68"
+  },
+  "README.md": {
+    "mtime": 1786688705.9866877,
+    "ast_hash": "5899d9561a529108b62544479ee541f3",
+    "semantic_hash": ""
+  },
+  "voice_coding_agent/ai_arena_temp/code.txt": {
+    "mtime": 1786688705.9873114,
+    "ast_hash": "51e9013c7819ce5cd570d421bf21c519",
+    "semantic_hash": ""
+  },
+  "voice_coding_agent/ai_arena_temp/cyb.txt": {
+    "mtime": 1786688705.987406,
+    "ast_hash": "fef5411691b5a61d846fe0b92cfdc74e",
+    "semantic_hash": ""
+  },
+  "voice_coding_agent/docker-compose.yml": {
+    "mtime": 1786688705.987815,
+    "ast_hash": "d6549dc54204a148df260209c1e8685f",
+    "semantic_hash": ""
+  },
+  "voice_coding_agent/requirement.txt": {
+    "mtime": 1786688705.9883995,
+    "ast_hash": "b83d9e1922a772b833470a295a2884aa",
+    "semantic_hash": ""
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Theory Explained</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 40px; background: #f4f4f9; color: #222; }
+        h1, h2 { color: #3b3b6d; }
+        .example { padding: 16px; margin: 16px 0; border-radius: 8px; color: #fff; display: flex; align-items: center; }
+        .swatch { width: 50px; height: 50px; border-radius: 8px; margin-right: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        .primary { background: #007bff; }
+        .secondary { background: #6c757d; }
+        .complimentary { background: linear-gradient(90deg,#ff6347 50%, #4682b4 50%); }
+        .analogous { background: linear-gradient(90deg,#f39c12 33.3%, #27ae60 33.3% 66.6%, #2980b9 66.6%); }
+        .triadic { background: linear-gradient(90deg,#e74c3c 33.3%, #2ecc71 33.3% 66.6%, #3498db 66.6%); }
+        code { background: #ececec; padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Color Theory</h1>
+    <p>Color theory is a collection of rules and guidelines designers use to communicate with users through color combinations. It helps you understand how colors interact, mix, and the visual effects of specific color combinations.</p>
+
+    <h2>1. Primary & Secondary Colors</h2>
+    <div class="example">
+        <div class="swatch primary"></div>
+        <div>
+            <b>Primary Colors:</b> Red, Blue, Yellow.<br>
+            Primary colors are fundamental colors that cannot be created by mixing others.<br>
+            <b>Example:</b> <code>#FF0000</code> (Red), <code>#007bff</code> (Blue), <code>#FFD700</code> (Yellow)
+        </div>
+    </div>
+    <div class="example">
+        <div class="swatch secondary"></div>
+        <div>
+            <b>Secondary Colors:</b> Green, Orange, Purple.<br>
+            Secondary colors are made by mixing two primary colors.<br>
+            <b>Example:</b> <code>#FFA500</code> (Orange), <code>#800080</code> (Purple), <code>#008000</code> (Green)
+        </div>
+    </div>
+
+    <h2>2. Complementary Colors</h2>
+    <div class="example">
+        <div class="swatch complimentary"></div>
+        <div>
+            <b>Complementary Colors:</b> Colors opposite each other on the color wheel—provide high contrast.<br>
+            <b>Example:</b> <code>#FF6347</code> (Tomato) &amp; <code>#4682B4</code> (Steel Blue)
+        </div>
+    </div>
+
+    <h2>3. Analogous Colors</h2>
+    <div class="example">
+        <div class="swatch analogous"></div>
+        <div>
+            <b>Analogous Colors:</b> Colors adjacent on the color wheel. They match well and create serene designs.<br>
+            <b>Example:</b> <code>#f39c12</code> (Yellow Orange), <code>#27ae60</code> (Green), <code>#2980b9</code> (Blue)
+        </div>
+    </div>
+
+    <h2>4. Triadic Colors</h2>
+    <div class="example">
+        <div class="swatch triadic"></div>
+        <div>
+            <b>Triadic Colors:</b> Three colors evenly spaced around the color wheel—vivid, vibrant contrast.<br>
+            <b>Example:</b> <code>#e74c3c</code> (Red), <code>#2ecc71</code> (Green), <code>#3498db</code> (Blue)
+        </div>
+    </div>
+
+    <h2>5. Color Harmony</h2>
+    <p>Color harmony creates pleasing arrangements and balance. Designers use combinations like complementary, analogous, or triadic schemes for effective color palettes.</p>
+    <footer style="margin-top:40px; color:#888;">&copy; 2024 Color Theory Guide</footer>
+</body>
+</html>

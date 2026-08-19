@@ -1,0 +1,4 @@
+voice_coding_agent/.runtime/
+/.runtime/
+**/__pycache__/
+voice_coding_agent/.env

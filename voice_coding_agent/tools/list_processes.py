@@ -1,13 +1,17 @@
 from langchain_core.tools import tool
+import os
+
+from tools.tool_trace import format_process_result, run_traced_process, trace_tool
 
 @tool
+@trace_tool
 def list_processes():
     """
     Lists processes currently running for the user.
     """
-    import subprocess
-    try:
-        result = subprocess.check_output("ps aux", shell=True, universal_newlines=True)
-        return result
-    except Exception as e:
-        return f"Failed to list processes: {str(e)}"
+    result = run_traced_process(
+        ["ps", "aux"],
+        cwd=os.getcwd(),
+        tool_name="list_processes",
+    )
+    return format_process_result(result)
