@@ -1,385 +1,278 @@
-# 🎙️ CodeWhisper
+# CodeWhisper
 
-> **Whisper your ideas, watch them become code.** An AI-powered voice coding assistant that transforms natural language into executable code, making development faster, hands-free, and more accessible.
+CodeWhisper is a local AI coding-agent prototype with a terminal interface and visual version control for generated web interfaces. You describe a change in natural language, the LangGraph agent uses LiteLLM and OpenAI to select development tools, and the result can be saved as a Git checkpoint, previewed in Docker, or used as the starting point for a new branch.
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![LangGraph](https://img.shields.io/badge/LangGraph-Enabled-green.svg)](https://github.com/langchain-ai/langgraph)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Persistence-brightgreen.svg)](https://www.mongodb.com/)
-[![AI](https://img.shields.io/badge/AI-LiteLLM%20%2B%20OpenAI-orange.svg)](https://docs.litellm.ai/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![CodeWhisper terminal interface](docs/images/codewhisper-terminal.png)
 
----
+## What the project does
 
-## 🌟 Why CodeWhisper?
+CodeWhisper brings two connected workflows into one project:
 
-CodeWhisper isn't just another coding tool—it's your intelligent pair programmer that listens, understands, and executes. Whether you're prototyping at lightning speed, coding with accessibility needs, or simply want a hands-free development experience, CodeWhisper makes it effortless.
+1. **Conversational coding agent** — accepts text commands in the terminal, calls development tools, captures command output, and keeps conversation checkpoints in MongoDB.
+2. **Visual UI version control** — displays Git history as a visual timeline, previews a selected static UI, and creates an isolated branch/worktree when you continue from an older checkpoint.
 
-### 💡 The Problem We Solve
+The default generated-UI workspace is [`voice_coding_agent/ai_arena`](voice_coding_agent/ai_arena). A previewable version must contain an `index.html` file in that directory and must be committed as a checkpoint.
 
-- ⌨️ **Tired of typing?** Code fatigue is real. Give your fingers a rest.
-- ♿ **Accessibility matters**: Empowering developers with mobility challenges or RSI.
-- 🚀 **Speed is everything**: Think it, say it, build it—no context switching.
-- 🧠 **Context is king**: Never lose your train of thought while searching docs or files.
-- 🎯 **Focus on logic**: Describe what you want, not how to type it.
+## Current features
 
----
+| Feature | Status | What it provides |
+| --- | --- | --- |
+| Terminal chat | Supported | Clean green terminal UI with a text prompt and formatted agent responses |
+| LiteLLM + OpenAI | Supported | LiteLLM routes the configured model to OpenAI using `OPENAI_API_KEY` |
+| Agent tools | Supported | Shell commands, file search, process inspection, Python documentation, Git push, and version-preview operations |
+| Persistent conversations | Supported | LangGraph checkpoints stored in MongoDB |
+| Tool traces | Supported | Tool arguments, results, command output, status, and duration recorded under `.runtime` |
+| Git checkpoints | Supported | Saves accepted changes from `voice_coding_agent/ai_arena` as Git commits |
+| Version timeline | Supported | Browser dashboard for inspecting commits, branches, prompts, and preview state |
+| Continue from an old version | Supported | Creates a new Git branch and isolated worktree from the selected commit |
+| Docker preview | Static UI only | Serves committed HTML/CSS/JavaScript through a restricted Nginx container |
+| Voice input | Optional/manual | Voice-input code exists, but text mode is enabled by default |
+| RAG indexing | Legacy/optional | Not required for normal startup; the remaining legacy indexing tool requires a Gemini key if called |
+| Dynamic backend previews | Not implemented | The preview runtime does not execute generated server-side application code |
 
-## ✨ Powerful Features
+## Visual version control
 
-### 🎤 **Dual Input Modes**
-Switch seamlessly between voice commands and text input. Perfect for when you're heads-down coding or presenting.
+![CodeWhisper visual version-control dashboard](docs/images/version-control-dashboard.png)
 
-### 🧠 **Persistent Memory with MongoDB**
-Your conversations aren't lost. Pick up exactly where you left off, maintaining full context across sessions.
+The dashboard treats Git as the source of truth:
 
-### 🔧 **Smart Tool Ecosystem**
-- **Execute Shell Commands**: Run any terminal command with safety confirmations
-- **Intelligent File Search**: Find code patterns across your entire project instantly
-- **GitHub Integration**: Commit and push with a simple voice command
-- **Live Process Monitoring**: Track system resources and running processes
-- **Python Documentation**: Instant access to module docs without leaving your flow
-- **Codebase Indexing**: RAG-powered understanding of your entire project
+- **Save checkpoint** commits the generated UI workspace.
+- **Start preview** materializes the selected commit and serves its static files in Docker.
+- **Continue from here** creates a branch and worktree from an older checkpoint, then directs later agent tools to that workspace.
+- Selecting a checkpoint shows its commit, branch, date, recorded prompt, and preview state.
 
-### 🤖 **AI-Powered by LiteLLM + OpenAI**
-Uses LiteLLM as the model gateway and routes the default coding assistant model to OpenAI with `OPENAI_API_KEY`. Change `LITELLM_MODEL` without changing the LangGraph tool workflow.
+For implementation and API details, see the [visual version-control documentation](voice_coding_agent/version_preview/README.md).
 
-### 🛡️ **Safety First Design**
-Destructive operations require confirmation. Your codebase stays protected while you explore.
-
-### 📚 **RAG-Enhanced Intelligence**
-CodeWhisper indexes your codebase, understands relationships, and provides context-aware suggestions based on YOUR code style.
-
-### 🧬 **Visual Version Control and Previews**
-Save meaningful generated-UI checkpoints, inspect the Git lineage, branch from an older design, and run a selected static version in an isolated Docker preview. See [Visual Version Control](voice_coding_agent/version_preview/README.md) for the local dashboard and preview requirements.
-
----
-
-## 🎯 Perfect For
-
-| Use Case | How CodeWhisper Helps |
-|----------|----------------------|
-| 🏃 **Rapid Prototyping** | Scaffold entire projects with conversational commands |
-| ♿ **Accessibility** | Code without keyboard—voice is your interface |
-| 🎥 **Live Coding/Demos** | Present and code simultaneously without switching focus |
-| 📖 **Learning to Code** | Describe what you want and learn from AI-generated solutions |
-| 🔍 **Code Exploration** | Navigate large codebases through natural language queries |
-| ⚡ **Productivity Boost** | Reduce context switching with hands-free documentation lookup |
-| 🤝 **Pair Programming** | Your AI co-pilot that never gets tired |
-
----
-
-## 🚀 Quick Start
+## Quick start
 
 ### Prerequisites
 
-```bash
-✅ Python 3.8 or higher
-✅ MongoDB instance (local or remote)
-✅ OpenAI API credentials
-✅ Microphone (for voice mode)
-```
+- Git
+- Python 3.11 or newer
+- Docker Desktop or another Docker installation with `docker compose`
+- An OpenAI API key
+- macOS or Linux shell environment for `start.sh`
 
-### Installation
+### 1. Clone and create the virtual environment
 
 ```bash
-# 1. Clone the repository
 git clone https://github.com/Uhimanshu9/CodeWhisper.git
 cd CodeWhisper
 
-# 2. Install dependencies
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r voice_coding_agent/requirement.txt
-
-# 3. Start MongoDB (using Docker)
-docker-compose up -d
-
-# 4. Configure environment
-cd voice_coding_agent
-cp .env.example .env
-# Edit .env with your credentials
 ```
 
-### Configuration
+### 2. Configure the application
 
-Create `.env` file:
+```bash
+cp voice_coding_agent/.env.example voice_coding_agent/.env
+```
+
+Open `voice_coding_agent/.env` and replace the placeholder API key:
+
 ```env
 MONGODB_URI=mongodb://admin:admin@localhost:27017
 OPENAI_API_KEY=your_openai_api_key_here
 LITELLM_MODEL=openai/gpt-4.1
+VERSION_PREVIEW_PORT=4090
+VERSION_PREVIEW_CONTENT_DIR=voice_coding_agent/ai_arena
 ```
 
-### Run CodeWhisper
+Do not commit `.env` or share your API key.
+
+### 3. Start everything
+
+From the repository root, run:
+
+```bash
+./start.sh
+```
+
+This single command:
+
+1. Starts MongoDB with Docker Compose.
+2. Starts the visual version-control dashboard.
+3. Opens the CodeWhisper terminal agent in the current terminal.
+
+The dashboard is available at [http://127.0.0.1:4090](http://127.0.0.1:4090).
+
+Type a request after the `CODEWHISPER ›` prompt. Type `stop` or press `Ctrl+C` to end the terminal session. The agent and dashboard stop, while MongoDB remains running so its data is preserved.
+
+To stop MongoDB later:
+
+```bash
+docker compose -f voice_coding_agent/docker-compose.yml down
+```
+
+## Basic workflow
+
+### Create or edit a UI
+
+Ask the terminal agent for a static web page, for example:
+
+```text
+Create a clean todo application in ai_arena with index.html, styles.css, and app.js.
+```
+
+The agent is instructed to place generated files under `voice_coding_agent/ai_arena`.
+
+### Save the accepted design
+
+After checking the result, ask the agent to save a checkpoint or use **Save checkpoint** in the dashboard. Give the checkpoint a useful description such as `Add compact todo dashboard`.
+
+### Preview a version
+
+1. Open [http://127.0.0.1:4090](http://127.0.0.1:4090).
+2. Select a checkpoint in the timeline.
+3. Choose **Start preview**.
+4. Use the preview shown in the Inspector panel.
+
+Only committed static applications containing `voice_coding_agent/ai_arena/index.html` can currently be previewed.
+
+### Return to an older design
+
+1. Select the older checkpoint.
+2. Choose **Continue from here**.
+3. CodeWhisper creates a new branch and isolated worktree.
+4. Continue editing through the terminal agent; supported tools now operate in that worktree.
+
+This keeps the newer version intact and creates a new line of development from the selected design.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    User["User"] --> Terminal["Terminal UI"]
+    Terminal --> Graph["LangGraph agent"]
+    Graph --> Model["LiteLLM → OpenAI"]
+    Graph --> Tools["Development and version tools"]
+    Graph <--> MongoDB["MongoDB checkpoints"]
+    Tools --> Workspace["Project files / active Git worktree"]
+    Tools --> Traces["Tool and command traces"]
+
+    Browser["Visual version-control dashboard"] --> API["Local preview API"]
+    API --> Git["Git commits, branches, worktrees"]
+    API --> Docker["Restricted static Docker preview"]
+    Git --> Workspace
+```
+
+### Request flow
+
+1. `audio_test.py` receives terminal text and sends it to the compiled LangGraph conversation.
+2. `llm_provider.py` converts LangChain messages and tool schemas into LiteLLM requests.
+3. OpenAI returns either a response or one or more tool calls.
+4. LangGraph executes tools and returns their captured output to the model.
+5. MongoDB stores the conversation checkpoint, while tool traces are written locally.
+6. The version-preview service uses Git for history and Docker for static UI previews.
+
+## Project structure
+
+```text
+CodeWhisper/
+├── start.sh                              # Starts MongoDB, dashboard, and terminal agent
+├── docs/images/                          # README screenshots
+└── voice_coding_agent/
+    ├── audio_test.py                     # Text and optional voice input loops
+    ├── terminal_ui.py                    # Green terminal interface
+    ├── code_graph.py                     # LangGraph workflow and tool registration
+    ├── llm_provider.py                   # LiteLLM/OpenAI adapter
+    ├── docker-compose.yml                # Local MongoDB
+    ├── ai_arena/                         # Generated static UI workspace
+    ├── tools/
+    │   ├── run_command.py                # Non-interactive subprocess execution
+    │   ├── search_in_files.py            # Project search
+    │   ├── list_processes.py             # Process inspection
+    │   ├── show_python_docs.py           # Python documentation lookup
+    │   ├── push_to_github.py             # Git commit/push helper
+    │   ├── tool_trace.py                 # Tool and subprocess tracing
+    │   └── version_preview.py            # Agent-facing checkpoint/preview tools
+    └── version_preview/
+        ├── app.py                        # Local dashboard HTTP server/API
+        ├── service.py                    # Git, worktree, and Docker operations
+        ├── static/                       # Dashboard frontend
+        └── docker/                       # Restricted Nginx preview image
+```
+
+## Manual startup
+
+Use these commands when you want to run components separately.
+
+Start MongoDB:
+
+```bash
+docker compose -f voice_coding_agent/docker-compose.yml up -d
+```
+
+Start the dashboard:
 
 ```bash
 cd voice_coding_agent
-python audio_test.py
+../.venv/bin/python -m version_preview.app
 ```
 
-**Switch to Voice Mode**: Edit `audio_test.py` and uncomment `voice_input()`
-
----
-
-## 🎮 Usage Examples
-
-### 🎤 Voice Commands
-
-```
-🗣️ "Create a FastAPI endpoint for user registration with email validation"
-
-🗣️ "Search for all TODO comments in Python files"
-
-🗣️ "Show me the documentation for the requests library"
-
-🗣️ "Push my changes to GitHub with message 'Added authentication'"
-
-🗣️ "List all running Python processes"
-
-🗣️ "Update the project index with my latest changes"
-
-🗣️ "Explain how the database connection works in this project"
-```
-
-### 💬 Text Commands
+Start the terminal agent in another terminal:
 
 ```bash
-💬 Write a Python function to validate email addresses
-💬 Create a React component for a login form
-💬 Debug why my database connection is failing
-💬 Refactor this code to use async/await
-💬 Generate unit tests for the authentication module
+cd voice_coding_agent
+../.venv/bin/python audio_test.py
 ```
 
----
+## Configuration
 
-## 🛠️ Tool Arsenal
+| Variable | Default | Purpose |
+| --- | --- | --- |
+| `MONGODB_URI` | `mongodb://admin:admin@localhost:27017` | Documents the local checkpoint database URI; the current CLI expects the matching Docker Compose credentials |
+| `OPENAI_API_KEY` | none | Required for the default OpenAI model |
+| `LITELLM_MODEL` | `openai/gpt-4.1` | LiteLLM model identifier |
+| `VERSION_PREVIEW_PORT` | `4090` | Local dashboard port |
+| `VERSION_PREVIEW_CONTENT_DIR` | `voice_coding_agent/ai_arena` | Directory committed and previewed as generated UI |
+| `CODEWHISPER_NO_CLEAR` | `0` | Set to `1` to preserve startup logs instead of clearing the terminal |
+| `CODEWHISPER_COMMAND_TIMEOUT_SECONDS` | `120` | Timeout for subprocess-backed agent tools |
+| `CODEWHISPER_TRACE_FILE` | internal `.runtime` path | Optional custom JSONL trace destination |
 
-| Tool | Superpower | Example Command |
-|------|------------|-----------------|
-| 🔨 `run_command_with_confirmation` | Execute shell commands safely | "Install numpy using pip" |
-| 📊 `list_processes` | Monitor system resources | "Show memory usage" |
-| 🚀 `push_to_github` | One-command Git workflow | "Push changes to main" |
-| 🔍 `search_in_files` | Find anything in your codebase | "Find all API endpoints" |
-| 📖 `show_python_docs` | Instant documentation | "Show pandas DataFrame docs" |
-| 🧠 `update_project_index` | RAG-powered code understanding | "Index my React components" |
-
----
-
-## 🏗️ Architecture
-
-```
-CodeWhisper/
-├── voice_coding_agent/
-│   ├── audio_test.py          # 🎤 Voice/Text input handler
-│   ├── code_graph.py           # 🧠 LangGraph orchestration
-│   ├── tools/                  # 🔧 Development superpowers
-│   │   ├── run_command.py      # Shell execution
-│   │   ├── list_processes.py   # Process monitoring
-│   │   ├── push_to_github.py   # Git automation
-│   │   ├── search_in_files.py  # Code search
-│   │   └── show_python_docs.py # Doc lookup
-│   ├── rag/                    # 📚 Codebase intelligence
-│   ├── ai_arena_temp/          # 🎨 Generated code workspace
-│   └── docker-compose.yml      # 🐳 MongoDB setup
-```
-
-### 🔄 How It Works
-
-```
-1. 🎤 Input → Voice/Text captured
-2. 🧠 Understanding → LiteLLM routes the request to OpenAI
-3. 🎯 Routing → LangGraph selects appropriate tools
-4. ⚡ Execution → Tools run with safety checks
-5. 💾 Memory → State persisted to MongoDB
-6. 💬 Response → Natural language feedback
-```
-
----
-
-## 🔧 Advanced Configuration
-
-### Switch AI Models
-```env
-# In voice_coding_agent/.env
-LITELLM_MODEL=openai/gpt-4.1
-
-# LiteLLM also supports other providers when their credentials are configured.
-# For example: anthropic/claude-sonnet-4-5-20250929
-```
-
-### Customize Conversation Threads
-```python
-# Start new conversation
-config = {"configurable": {"thread_id": "project-alpha"}}
-
-# Resume conversation
-config = {"configurable": {"thread_id": "existing-id"}}
-```
-
-### Adjust Voice Recognition
-```python
-recognizer.pause_threshold = 2  # Seconds of silence before processing
-recognizer.adjust_for_ambient_noise(source, duration=1)
-```
-
----
-
-## 📊 Performance & Requirements
-
-| Component | Specification |
-|-----------|--------------|
-| **RAM** | 4GB minimum, 8GB recommended |
-| **Storage** | 500MB for dependencies + codebase |
-| **Network** | Required for AI API calls |
-| **Microphone** | Any USB or built-in mic (48kHz+ recommended) |
-| **OS** | Windows, macOS, Linux (Ubuntu tested) |
-
----
-
-## 🤝 Contributing
-
-We'd love your help making CodeWhisper even better! 
-
-### How to Contribute
-
-1. 🍴 Fork the repository
-2. 🌿 Create your feature branch: `git checkout -b feature/AmazingFeature`
-3. 💬 Commit your changes: `git commit -m 'Add AmazingFeature'`
-4. 📤 Push to the branch: `git push origin feature/AmazingFeature`
-5. 🎉 Open a Pull Request
-
-### Development Setup
+Example with startup logs visible:
 
 ```bash
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# Install dev dependencies
-pip install -r requirements-dev.txt
-
-# Run tests
-pytest tests/ -v
+CODEWHISPER_NO_CLEAR=1 ./start.sh
 ```
 
-### Ideas for Contributions
+## Troubleshooting
 
-- 🌐 Add support for more LLMs (Anthropic, Ollama, local models)
-- 🎨 Build a web interface
-- 🔌 Create IDE plugins (VS Code, JetBrains)
-- 🌍 Multi-language support
-- 📝 Improve documentation
-- 🐛 Fix bugs and improve error handling
+### `OPENAI_API_KEY is not set`
 
----
+Ensure `voice_coding_agent/.env` exists and contains a valid `OPENAI_API_KEY`, then restart the project.
 
-## 🐛 Troubleshooting
+### MongoDB does not start
 
-<details>
-<summary><b>🎤 Voice Recognition Not Working</b></summary>
+Make sure Docker is running, then inspect the container:
 
-- Verify microphone permissions in system settings
-- Test microphone: `python -c "import speech_recognition as sr; print(sr.Microphone.list_microphone_names())"`
-- Reduce ambient noise
-- Install PyAudio properly: `pip install pyaudio`
-</details>
+```bash
+docker compose -f voice_coding_agent/docker-compose.yml ps
+docker compose -f voice_coding_agent/docker-compose.yml logs mongodb
+```
 
-<details>
-<summary><b>🔌 MongoDB Connection Failed</b></summary>
+### Port 4090 is already in use
 
-- Check if MongoDB is running: `docker ps`
-- Verify connection string in `.env`
-- Ensure port 27017 is not blocked by firewall
-- Test connection: `mongosh mongodb://localhost:27017`
-</details>
+Use a different dashboard port:
 
-<details>
-<summary><b>🤖 AI API Errors</b></summary>
+```bash
+VERSION_PREVIEW_PORT=4091 ./start.sh
+```
 
-- Verify the OpenAI API key is valid and active
-- Check API quota and billing in the OpenAI dashboard
-- Ensure billing is enabled
-- Test with a simple curl request to verify connectivity
-</details>
+### A preview cannot be started
 
-<details>
-<summary><b>⚠️ "Command Not Found" Errors</b></summary>
+Confirm the selected version is committed and contains:
 
-- Ensure you're in the correct directory
-- Check `ai_arena_temp/` folder exists
-- Verify file permissions
-- Try with absolute paths
-</details>
+```text
+voice_coding_agent/ai_arena/index.html
+```
 
----
+Docker must also be running. Preview logs are available from the dashboard and its local API.
 
-## 🗺️ Roadmap
+## Safety and current scope
 
-### 🎯 Upcoming Features
+CodeWhisper is a development prototype. The command tool executes generated shell commands on the host in the active agent workspace, so inspect the project and use it only in an environment you trust. Tool execution is non-interactive, time-limited, and traced, but it is not a complete host sandbox.
 
-- [ ] 🌐 **Multi-LLM Product Configuration**: provider routing is available through LiteLLM; UI/configuration is still pending
-- [ ] 🖥️ **Web Dashboard**: Beautiful UI for managing conversations
-- [ ] 🔌 **IDE Plugins**: VS Code, PyCharm, Cursor integration
-- [ ] 🌍 **Multi-Language**: Generate code in any programming language
-- [ ] 🎨 **Custom Tool Builder**: Create your own tools via GUI
-- [ ] 👥 **Team Features**: Shared conversations and knowledge bases
-- [ ] 📱 **Mobile App**: iOS/Android companions
-- [ ] 🔊 **Voice Customization**: Custom wake words and voice profiles
-- [ ] 📦 **Docker One-Click Deploy**: Complete containerized setup
-- [ ] 🧪 **Test Generation**: Auto-generate unit tests for any code
-- [ ] 📈 **Analytics Dashboard**: Track productivity and usage patterns
-- [ ] 🔐 **Enterprise Features**: SSO, audit logs, role-based access
-
-### 🌟 Future Vision
-
-CodeWhisper aims to become the **universal voice interface for software development**, supporting all languages, frameworks, and workflows while maintaining simplicity and accessibility.
-
----
-
-## 🏆 Showcase
-
-> "CodeWhisper has transformed how I prototype. What used to take hours now takes minutes!" - *Beta Tester*
-
-### Built with CodeWhisper
-*Coming soon: Show off what you've built using CodeWhisper!*
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-Free to use, modify, and distribute. Commercial use allowed!
-
----
-
-## 🙏 Acknowledgments
-
-Built with amazing open-source tools:
-
-- 🦜 [LangGraph](https://github.com/langchain-ai/langgraph) - Agentic AI workflows
-- 🔀 [LiteLLM](https://docs.litellm.ai/) - Unified model gateway
-- 🧠 [OpenAI](https://platform.openai.com/docs/overview) - Coding model provider
-- 🍃 [MongoDB](https://www.mongodb.com/) - Conversation persistence
-- 🎙️ [SpeechRecognition](https://github.com/Uberi/speech_recognition) - Voice input processing
-- 💚 Open Source Community - For inspiration and support
-
----
-
-## 📧 Connect
-
-**Himanshu Dahiya**
-
-- 🐙 GitHub: [@Uhimanshu9](https://github.com/Uhimanshu9)
-- 📧 Email: dev.himanshu.ai@gmail.com
-- 🔗 Project: [CodeWhisper](https://github.com/Uhimanshu9/CodeWhisper)
-
----
-
-<div align="center">
-
-### ⭐ Star us on GitHub — it motivates us a lot!
-
-**Built with ❤️ for developers who think faster than they type**
-
-[Report Bug](https://github.com/Uhimanshu9/CodeWhisper/issues) · [Request Feature](https://github.com/Uhimanshu9/CodeWhisper/issues) · [Discussions](https://github.com/Uhimanshu9/CodeWhisper/discussions)
-
-</div>
+Static previews receive additional Docker restrictions: a non-root user, read-only snapshot and filesystem, resource limits, dropped capabilities, and `no-new-privileges`. The current preview runtime is intentionally limited to static HTML/CSS/JavaScript served by Nginx.
